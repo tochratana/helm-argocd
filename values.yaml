@@ -10,7 +10,7 @@ image:
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "44276a3b"
+  tag: "c0be063d"
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
 # This is to override the chart name.
@@ -56,13 +56,11 @@ ingress:
   className: nginx
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-
   hosts:
     - host: nginx-test-lg.tochratana.com
       paths:
         - path: /
           pathType: Prefix
-
   tls:
     - secretName: nginx-demo-tls
       hosts:
